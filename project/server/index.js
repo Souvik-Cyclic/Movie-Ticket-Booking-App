@@ -21,6 +21,10 @@ app.use("/api/theatres", theatreRoute);
 app.use("/api/shows", showRoute);
 app.use("/api/bookings", bookingRoute);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Movie Ticket Booking App API");
+});
+
 const PORT = process.env.PORT || 8081;
 
 app.listen(PORT, () => {
